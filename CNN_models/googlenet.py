@@ -68,7 +68,7 @@ def g_net(folder_path):
         optim.zero_grad()
         running_loss += loss.item()*batch_size
         running_acc += torch.sum(preds==labels)
-      running_val_loss, running_val_acc = model_val(model, criterion, optim)
+      running_val_loss, running_val_acc = model_val(model, criterion)
       epoch_train_loss = running_loss/len(train_ds)
       epoch_train_acc = running_acc.double()/len(train_ds)
       print("Epoch: {}".format(epoch+1))
