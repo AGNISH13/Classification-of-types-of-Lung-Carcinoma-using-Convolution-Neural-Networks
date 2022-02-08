@@ -33,14 +33,15 @@ def vgg_net(folder_path):
 
   epoch_n=20
   l_rate = 0.000005
-  batch_size = 50
-
+  batch_size_tr = 60
+  batch_size_val = 50
+  
   # Dataset loaded in the system
 
-  train_ds = ImageFolder(folder_path+'/train',transform=train_transform)
+  train_ds = ImageFolder(folder_path+'/train',transform = train_transform)
   val_ds = ImageFolder(folder_path+'/val', transform = val_transform)
-  train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True, num_workers=2, drop_last=True)
-  val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=True, num_workers=2, drop_last=True)
+  train_loader = DataLoader(train_ds, batch_size=batch_size_tr, shuffle=True, num_workers=2, drop_last=True)
+  val_loader = DataLoader(val_ds, batch_size=batch_size_val, shuffle=True, num_workers=2, drop_last=True)
   if torch.cuda.is_available():
     device = torch.device('cuda')
   else:
@@ -67,7 +68,7 @@ def vgg_net(folder_path):
           loss.backward()
           optim.step()
         optim.zero_grad()
-        running_loss += loss.item()*batch_size
+        running_loss += loss.item()*batch_size_tr
         running_acc += torch.sum(preds==labels)
       running_val_loss, running_val_acc = model_val(model, criterion)
       epoch_train_loss = running_loss/len(train_ds)
@@ -104,7 +105,7 @@ def vgg_net(folder_path):
       outputs = model(images)
       _ ,preds = torch.max(outputs,1)
       loss = criterion(outputs,labels)
-      running_val_loss += loss.item()*batch_size
+      running_val_loss += loss.item()*batch_size_val
       running_val_acc += torch.sum(preds==labels)
     return running_val_loss, running_val_acc
 
