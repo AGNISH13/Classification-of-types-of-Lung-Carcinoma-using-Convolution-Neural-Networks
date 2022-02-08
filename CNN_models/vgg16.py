@@ -38,7 +38,7 @@ def vgg_net(folder_path):
 
   # Dataset loaded in the system
 
-  train_ds = ImageFolder(folder_path+'/test',transform=train_transform)
+  train_ds = ImageFolder(folder_path+'/train',transform=train_transform)
   val_ds = ImageFolder(folder_path+'/val', transform = val_transform)
   train_loader = DataLoader(train_ds, batch_size=batch_size_tr, shuffle=True, num_workers=2, drop_last=True)
   val_loader = DataLoader(val_ds, batch_size=batch_size_val, shuffle=True, num_workers=2, drop_last=True)
