@@ -23,7 +23,7 @@ The Python packages which are in use in this project are  `matplotlib`, `numpy`,
 
 ## Code implementation
 - ### Data paths :
-      Current directory ----> Data Folder
+      Current directory ----> Data_Folder
                                   |
                                   |
                                   |               
@@ -57,7 +57,7 @@ The Python packages which are in use in this project are  `matplotlib`, `numpy`,
         
 -  ### Run the following for training and validation :
   
-      `python main.py -data Data Folder/ -cnn vgg16`
+      `python main.py -data Data_Folder -cnn vgg16`
       
 -  ### Specific tokens :
 
