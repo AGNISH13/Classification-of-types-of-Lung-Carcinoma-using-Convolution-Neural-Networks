@@ -45,7 +45,7 @@ The Python packages which are in use in this project are  `matplotlib`, `numpy`,
                                               
                                
 - Where the folders `train` and `val` contain the folders `lung_n`, `lung_aca`and `lung_scc`, which include the original histopathological images of respective type of lung carcinoma in `.jpg`/`.png` format.
-- `Note:` The folders `lung_n`, `lung_aca`and `lung_scc` contain the histopathological images of 'Benign', 'Adenocarcinoma' and 'Squamous cell Carcinoma' samples respectively.
+- `Note:` The folders `lung_n`, `lung_aca`and `lung_scc` contain the histopathological images of 'Benign', 'Adenocarcinoma' and 'Squamous cell carcinoma' samples respectively.
 
 - ### Training and Evaluating different CNN models :
       -help
