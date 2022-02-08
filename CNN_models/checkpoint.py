@@ -12,5 +12,5 @@ def check_point(folder_path, CNN_type):
         vgg16.vgg_net(folder_path)
     elif CNN_type == 'densenet121':
         densenet121.dense_net(folder_path)
-    else:
+    else: #default run
         googlenet.g_net(folder_path)
