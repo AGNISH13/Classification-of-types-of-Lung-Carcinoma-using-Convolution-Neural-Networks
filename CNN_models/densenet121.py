@@ -38,7 +38,8 @@ def dense_net(folder_path):
 
   epoch_no=20
   l_rate = 0.00001
-  batch_size = 30
+  batch_size_tr = 60
+  batch_size_val = 30
 
   # Loading the dataset in the system
 
@@ -70,7 +71,7 @@ def dense_net(folder_path):
         optim.zero_grad()
 
       # Calculating and printing all Statistics
-        running_loss += loss.item()*batch_size
+        running_loss += loss.item()*batch_size_tr
         running_acc += torch.sum(preds==labels)
       running_val_loss, running_val_acc = model_val(model, criterion)
       epoch_train_loss = running_loss/len(train_ds)
@@ -110,7 +111,7 @@ def dense_net(folder_path):
       outputs = model(images)
       _ ,preds = torch.max(outputs,1)
       loss = criterion(outputs,labels)
-      running_val_loss += loss.item()*batch_size
+      running_val_loss += loss.item()*batch_size_val
       running_val_acc += torch.sum(preds==labels)
     return running_val_loss, running_val_acc
 
