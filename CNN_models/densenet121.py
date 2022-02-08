@@ -37,7 +37,7 @@ def dense_net(folder_path):
   # Hyperparameter tuning
 
   epoch_no=20
-  l_rate = 0.00001
+  l_rate = 0.000005
   batch_size_tr = 60
   batch_size_val = 30
 
