@@ -1,13 +1,13 @@
 # Classification-of-types-of-Lung-Carcinoma-using-Convolution-Neural-Networks
 
 ## Project Description
-This is a python-based project classifying the type of Lung Carcinoma disease through histopathological image samples through the application of 4 popular Convolution Neural Networks, namely GoogLeNet, VGG-16, ResNet-18 and DenseNet-121, one at a time, giving a diifferent Training and Validation accuracy in each epoch.
+This is a python-based project classifying the type of Lung Carcinoma disease based on deep analysis of histopathological image samples through the application of 4 popular Convolution Neural Networks, namely `GoogLeNet`, `VGG-16`, `ResNet-18` and `DenseNet-121`, one at a time, giving a different Training and Validation accuracy for each epoch.
 
 ## Classes of Division
 In this project, the histopathological image samples of human lungs have been classified into three categories, namely:  
 - `Lung Benign tissue`  
 - `Lung Adenocarcinoma`  
-- `Lung Squamous cell Carcinoma`
+- `Lung Squamous cell carcinoma`
 
 ## Convolution Neural Network models used
 Four CNN models have been applied on the dataset, namely:  
