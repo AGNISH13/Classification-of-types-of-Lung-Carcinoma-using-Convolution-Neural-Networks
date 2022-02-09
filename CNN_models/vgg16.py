@@ -125,3 +125,6 @@ def vgg_net(folder_path):
 
   print("<---VGG16 CNN model---> \n\n\n")
   model = model_train(model, criterion, optim, epoch_n)
+
+  
+  
