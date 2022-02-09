@@ -49,8 +49,9 @@ def g_net(folder_path):
   # Fine tuned GoogLeNet model 
 
   def model_train (model, criterion, optim, epoch_n):
-    train_loss_values = []
-    val_loss_values = []
+    # Uncomment the following to plot
+    '''train_loss_values = []
+    val_loss_values = []'''
     best_acc= 0.0
     best_model_wts = copy.deepcopy(model.state_dict())
     for epoch in range(epoch_n):
@@ -86,11 +87,12 @@ def g_net(folder_path):
         best_model_wts = copy.deepcopy(model.state_dict())
     print("Best model has validation accuracy: {}".format(best_acc))
     model.load_state_dict(best_model_wts)
-    plt.plot(range(epoch_n),np.array(train_loss_values),'b',label='train curve')
+    # Uncomment the following to plot
+    '''plt.plot(range(epoch_n),np.array(train_loss_values),'b',label='train curve')
     plt.plot(range(epoch_n),np.array(val_loss_values),'g',label='validation curve')
     plt.xlabel('EPOCH')
     plt.ylabel('LOSS')
-    plt.legend()
+    plt.legend()'''
     return model
 
 
