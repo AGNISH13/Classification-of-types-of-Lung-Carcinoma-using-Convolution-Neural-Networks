@@ -23,6 +23,7 @@ All the models have been trained over `20` epochs with batch_size of `60`
 -     GoogleNet
      ![image](https://user-images.githubusercontent.com/89198752/153136792-b68cb600-5f30-4ddc-bb78-3dee08e0e2f9.png)
 -     VGG-16
+     ![image](https://user-images.githubusercontent.com/89198752/153138623-6c81103e-471b-46a2-9524-a8abc846dd9e.png)
 -     ResNet-18
      ![image](https://user-images.githubusercontent.com/89198752/153137163-08121fd9-d5c4-4e68-8b4d-483fb7876bbe.png)
 -     DenseNet-121
