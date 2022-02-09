@@ -80,8 +80,9 @@ def g_net(folder_path):
       epoch_val_acc = running_val_acc.double()/len(val_ds)
       print('Val Loss: {:.4f}   Val Acc: {:.4f}'.format(epoch_val_loss,epoch_val_acc))
       print()
-      train_loss_values.append(epoch_train_loss)
-      val_loss_values.append(epoch_val_loss)
+      # Uncomment the following to plot
+      '''train_loss_values.append(epoch_train_loss)
+      val_loss_values.append(epoch_val_loss)'''
       if epoch_val_acc > best_acc:
         best_acc = epoch_val_acc
         best_model_wts = copy.deepcopy(model.state_dict())
