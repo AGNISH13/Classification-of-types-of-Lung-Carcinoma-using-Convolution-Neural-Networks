@@ -49,8 +49,10 @@ def g_net(folder_path):
   # Fine tuned GoogLeNet model 
 
   def model_train (model, criterion, optim, epoch_n):
+    #Uncomment the following to plot 
+    ''' 
     train_loss_values = []
-    val_loss_values = []
+    val_loss_values = []'''
     best_acc= 0.0
     best_model_wts = copy.deepcopy(model.state_dict())
     for epoch in range(epoch_n):
@@ -79,18 +81,22 @@ def g_net(folder_path):
       epoch_val_acc = running_val_acc.double()/len(val_ds)
       print('Val Loss: {:.4f}   Val Acc: {:.4f}'.format(epoch_val_loss,epoch_val_acc))
       print()
+      #Uncomment the following to plot 
+      '''
       train_loss_values.append(epoch_train_loss)
-      val_loss_values.append(epoch_val_loss)
+      val_loss_values.append(epoch_val_loss)'''
       if epoch_val_acc > best_acc:
         best_acc = epoch_val_acc
         best_model_wts = copy.deepcopy(model.state_dict())
     print("Best model has validation accuracy: {}".format(best_acc))
     model.load_state_dict(best_model_wts)
+    #Uncomment the following to plot 
+    '''
     plt.plot(range(epoch_n),np.array(train_loss_values),'b',label='train curve')
     plt.plot(range(epoch_n),np.array(val_loss_values),'g',label='validation curve')
     plt.xlabel('EPOCH')
     plt.ylabel('LOSS')
-    plt.legend()
+    plt.legend()'''
     return model
 
 
@@ -121,3 +127,6 @@ def g_net(folder_path):
 
   print("<---GoogLeNet CNN model---> \n\n\n")
   model = model_train(model, criterion, optim, epoch_n)
+
+  
+  
