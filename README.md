@@ -16,6 +16,18 @@ Four CNN models have been applied on the dataset, namely:
 -	`ResNet-18`  
 -	`DenseNet-121`
 
+## Train-Validation Learning Curve
+Train-Validation Curve is a popular method to helps us confirm normal behavioural characteristics of model over increasing number of epochs 
+ 
+All the models have been trained over `20` epochs with batch_size of `60`
+-     GoogleNet
+     ![image](https://user-images.githubusercontent.com/89198752/153136792-b68cb600-5f30-4ddc-bb78-3dee08e0e2f9.png)
+-     VGG-16
+-     ResNet-18
+     ![image](https://user-images.githubusercontent.com/89198752/153137163-08121fd9-d5c4-4e68-8b4d-483fb7876bbe.png)
+-     DenseNet-121
+     ![image](https://user-images.githubusercontent.com/89198752/153137273-eb8d7c7b-1747-4c7a-b117-7528121ccc9b.png)
+
 ## Dependencies
 Since the entire project is based on `Python` programming language, it is necessary to have Python installed in the system. It is recommended to use Python with version `>=3.6`.
 The Python packages which are in use in this project are  `matplotlib`, `numpy`, `pandas`, `torch` and `torchvision`. All these dependencies can be installed just by the following command line argument
