@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 def g_net(folder_path):
   
   
-  # Augmentation of dataset for increasing accuracy
+  # Augmentation of dataset to increase accuracy
 
   train_transform = transf.Compose([
       transf.Resize((224,224)),
