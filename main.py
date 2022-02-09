@@ -21,3 +21,5 @@ CNN_model = args.CNN_type
 
 checkpoint.check_point(folder_path, CNN_model)
 print('\n\nYour task is complete!')
+
+
