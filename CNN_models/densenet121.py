@@ -51,8 +51,9 @@ def dense_net(folder_path):
   # Training and Validating with fine tuned DenseNet model 
 
   def train_model(model, criterion, optim, epoch_no):
-    train_loss_values = []
-    val_loss_values = []
+    # Uncomment the following to plot 
+    '''train_loss_values = []
+    val_loss_values = []'''
     best_acc= 0.0
     best_model_wts = copy.deepcopy(model.state_dict())
     for epoch in range(epoch_no):
@@ -83,8 +84,8 @@ def dense_net(folder_path):
       epoch_val_acc = running_val_acc.double()/len(val_ds)
       print('Val Loss: {:.4f}   Val Acc: {:.4f}'.format(epoch_val_loss,epoch_val_acc))
       print()
-      train_loss_values.append(epoch_train_loss)
-      val_loss_values.append(epoch_val_loss)
+      '''train_loss_values.append(epoch_train_loss)
+      val_loss_values.append(epoch_val_loss)'''
       if epoch_val_acc > best_acc:
         best_acc = epoch_val_acc
         best_model_wts = copy.deepcopy(model.state_dict())
@@ -92,11 +93,12 @@ def dense_net(folder_path):
     # Printing Best Validation Accuracy and Loss vs Epoch Plot
     print("Best model has validation accuracy: {}".format(best_acc))
     model.load_state_dict(best_model_wts)
-    plt.plot(range(epoch_no),np.array(train_loss_values),'b',label='Train Curve')
+    # Uncommment the following to plot
+    '''plt.plot(range(epoch_no),np.array(train_loss_values),'b',label='Train Curve')
     plt.plot(range(epoch_no),np.array(val_loss_values),'g',label='Validation Curve')
     plt.xlabel('EPOCH')
     plt.ylabel('LOSS')
-    plt.legend()
+    plt.legend()'''
 
     return model
 
