@@ -131,3 +131,6 @@ def dense_net(folder_path):
 
   print("<---DenseNet CNN model---> \n\n\n")
   model = train_model(model, criterion, optim, epoch_no)
+
+  
+  
