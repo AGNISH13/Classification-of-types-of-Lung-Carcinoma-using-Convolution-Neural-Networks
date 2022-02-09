@@ -18,4 +18,3 @@ def check_point(folder_path, CNN_type):
 
         
         
-        
