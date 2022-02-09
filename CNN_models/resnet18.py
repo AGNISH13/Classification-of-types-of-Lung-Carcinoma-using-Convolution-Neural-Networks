@@ -132,3 +132,6 @@ def res_net(folder_path):
 
   print("<---ResNet CNN model---> \n\n\n")
   model = train_model(model, criterion, optim, epoch_no)
+
+  
+  
