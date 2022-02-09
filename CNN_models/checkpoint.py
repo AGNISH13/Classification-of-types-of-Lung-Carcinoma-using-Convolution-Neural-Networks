@@ -14,3 +14,6 @@ def check_point(folder_path, CNN_type):
         densenet121.dense_net(folder_path)
     else: #default run
         googlenet.g_net(folder_path)
+
+        
+        
