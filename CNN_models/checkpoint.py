@@ -15,3 +15,7 @@ def check_point(folder_path, CNN_type):
     else:
         #Default CNN model
         googlenet.g_net(folder_path) 
+
+        
+        
+        
