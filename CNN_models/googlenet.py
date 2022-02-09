@@ -124,3 +124,6 @@ def g_net(folder_path):
 
   print("<---GoogLeNet CNN model---> \n\n\n")
   model = model_train(model, criterion, optim, epoch_n)
+  
+  
+  
