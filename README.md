@@ -3,8 +3,12 @@
 ## Project Description
 This is a python-based project classifying the type of Lung Carcinoma disease based on deep analysis of histopathological image samples through the application of four popular Convolution Neural Networks, namely `GoogLeNet`, `VGG-16`, `ResNet-18` and `DenseNet-121`, one at a time, giving a different Training and Validation accuracy for each epoch.
 
+## Dataset description
+'Lung and Colon Cancer Histopathological Images' dataset is a publicly available dataset, which contains 25,000 histopathological images with 5 classes. All images are 768 x 768 pixels in size and are in jpeg file format. The images were generated from an original sample of HIPAA compliant and validated sources, consisting of 750 total images of lung tissue (250 benign lung tissue, 250 lung adenocarcinomas, and 250 lung squamous cell carcinomas) and 500 total images of colon tissue (250 benign colon tissue and 250 colon adenocarcinomas) and augmented to 25,000 using the Augmentor package. The dataset is available at:
+https://www.kaggle.com/andrewmvd/lung-and-colon-cancer-histopathological-images
+
 ## Classes of Division
-In this project, the histopathological image samples of human lungs have been classified into three categories, namely:  
+In this project, we have only used the histopathological image samples of human lungs, which have been classified into three categories, namely:  
 - `Lung Benign tissue`  
 - `Lung Adenocarcinoma`  
 - `Lung Squamous cell carcinoma`
