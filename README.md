@@ -74,11 +74,11 @@ The Python packages which are in use in this project are  `matplotlib`, `numpy`,
         
 -  ### Run the following for training and validation :
   
-      `python main.py -data Data_Folder -cnn vgg16`
+       python main.py -data Data_Folder -cnn vgg16
       
 -  ### Specific tokens :
 
-          GoogLeNet: 'googlenet'
-          VGG-16: 'vgg16'
-          ResNet-18: 'resnet18'
-          DenseNet-121: 'densenet121'
+       GoogLeNet: 'googlenet'
+       VGG-16: 'vgg16'
+       ResNet-18: 'resnet18'
+       DenseNet-121: 'densenet121'
